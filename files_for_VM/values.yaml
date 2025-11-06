@@ -1,0 +1,13 @@
+olakeUI:
+  service:
+    type: NodePort
+    port: 8000         # service port inside cluster
+    nodePort: 8000
+  ingress:
+    enabled: true
+    className: "nginx"
+    hosts:
+      - host: 
+        paths:
+          - path: /
+            pathType: Prefix
